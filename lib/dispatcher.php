@@ -1,6 +1,8 @@
 <?php
 class Dispatcher {
     var $controller;
+    var $controllerScript;
+    var $controllerClass;
     var $action;
     var $parameters;
     
@@ -22,7 +24,24 @@ class Dispatcher {
             $this->controller = 'root';
         }
 
+        $this->controllerScript = 'app/controllers/'.$this->controller.'.php';
+        $this->controllerClass = $this->controller.'Controller';
+        
         //$this->Command = new Axial_Command($controllerName, $controllerFunction, $parameters);
+    }
+    
+    function controllerExists() {
+        return file_exists($this->controllerScript);
+    }
+    
+    function dispatch() {
+#        if (!$this->controllerExists) {
+#            return;
+#        }
+        include $this->controllerScript;
+        $controller = new $this->controllerClass();
+        echo ($controller == null);
+        $controller->execute();
     }
 }
 ?>
