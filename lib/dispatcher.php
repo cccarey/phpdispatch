@@ -26,8 +26,6 @@ class Dispatcher {
 
         $this->controllerScript = 'app/controllers/'.$this->controller.'.php';
         $this->controllerClass = $this->controller.'Controller';
-        
-        //$this->Command = new Axial_Command($controllerName, $controllerFunction, $parameters);
     }
     
     function controllerExists() {
@@ -40,8 +38,12 @@ class Dispatcher {
         }
         include $this->controllerScript;
         $controller = new $this->controllerClass();
-        echo ($controller == null);
-        $controller->execute();
+        
+        if (!is_callable($controller, $this->action)) {
+            $this->action = '_default';
+        }
+        
+        call_user_func(array($controller, $this->action));
     }
 }
 ?>

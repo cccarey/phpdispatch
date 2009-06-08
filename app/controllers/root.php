@@ -1,6 +1,6 @@
 <?php
 class RootController {
-    function execute() {
+    function _default() {
         include 'app/views/root.php';
     }
 }

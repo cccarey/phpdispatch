@@ -1,3 +1,2 @@
-- Dispatcher needs to map action to the action method
 - make base app uri dynamic, i.e. remove hardcoded basedir var
 

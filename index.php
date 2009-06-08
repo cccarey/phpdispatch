@@ -1,10 +1,11 @@
 <?php
+define('BASEDIR', '/dispatcher/');
+define('ROOT', dirname(__FILE__));
+
 include 'lib/dispatcher.php';
 
 global $basedir;
-global $dispatcher;
 
-$basedir = "/dispatcher/";
 $dispatcher = new Dispatcher();
 $dispatcher->dispatch();
 ?>

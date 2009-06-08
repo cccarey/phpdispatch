@@ -1,6 +1,5 @@
 <?php
 global $dispatcher;
-global $basedir;
 ?>
 <html>
     <head>
@@ -34,11 +33,11 @@ global $basedir;
         </ul>
         <h3>Test Links</h3>
         <ul>
-            <li><a href="<?php echo $basedir; ?>test/">Test - no action</a></li>
-            <li><a href="<?php echo $basedir; ?>test/show">Test - show</a></li>
-            <li><a href="<?php echo $basedir; ?>test/show/param1/param2">Test - show - with parameters</a></li>
-            <li><a href="<?php echo $basedir; ?>badcontroller/">Bad Controller</a></li>
-            <li><a href="<?php echo $basedir; ?>">Home</a></li>
+            <li><a href="<?php echo BASEDIR; ?>test/">Test - no action</a></li>
+            <li><a href="<?php echo BASEDIR; ?>test/show">Test - show</a></li>
+            <li><a href="<?php echo BASEDIR; ?>test/show/param1/param2">Test - show - with parameters</a></li>
+            <li><a href="<?php echo BASEDIR; ?>badcontroller/">Bad Controller</a></li>
+            <li><a href="<?php echo BASEDIR; ?>">Home</a></li>
         </ul>
     </body>
 </html>
