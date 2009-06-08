@@ -35,9 +35,9 @@ class Dispatcher {
     }
     
     function dispatch() {
-#        if (!$this->controllerExists) {
-#            return;
-#        }
+        if (!$this->controllerExists()) {
+            return;
+        }
         include $this->controllerScript;
         $controller = new $this->controllerClass();
         echo ($controller == null);

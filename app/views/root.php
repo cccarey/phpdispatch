@@ -37,6 +37,7 @@ global $basedir;
             <li><a href="<?php echo $basedir; ?>test/">Test - no action</a></li>
             <li><a href="<?php echo $basedir; ?>test/show">Test - show</a></li>
             <li><a href="<?php echo $basedir; ?>test/show/param1/param2">Test - show - with parameters</a></li>
+            <li><a href="<?php echo $basedir; ?>badcontroller/">Bad Controller</a></li>
             <li><a href="<?php echo $basedir; ?>">Home</a></li>
         </ul>
     </body>
