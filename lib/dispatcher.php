@@ -38,8 +38,8 @@ class Dispatcher {
         }
         include $this->controllerScript;
         $controller = new $this->controllerClass();
-        
-        if (!is_callable($controller, $this->action)) {
+       
+        if (!is_callable(array($controller, $this->action))) {
             $this->action = '_default';
         }
         
