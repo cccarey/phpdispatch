@@ -2,13 +2,15 @@
 rootdir=`pwd`
 
 mkdir /tmp/phpdispatch
+mkdir /tmp/phpdispatch/fw
 
-cp -r lib /tmp/phpdispatch
+cp -r fw/dispatcher /tmp/phpdispatch/fw
 cp index.php /tmp/phpdispatch
 cp .htaccess /tmp/phpdispatch
 
-cd /tmp
-tar cfz $rootdir/phpdispatch.tgz phpdispatch
+cd /tmp/phpdispatch
+tar cfz $rootdir/phpdispatch.tgz .
+cd ..
 
 rm -rf phpdispatch
 

@@ -1,10 +1,9 @@
 <?php
-define('BASEDIR', '/dispatcher/');
 define('ROOT', dirname(__FILE__));
 
-include 'lib/dispatcher.php';
+define('BASEDIR', str_replace('//', '/', dirname($_SERVER['SCRIPT_NAME']).'/'));
 
-global $basedir;
+include 'fw/dispatcher/dispatcher.php';
 
 $dispatcher = new Dispatcher();
 $dispatcher->dispatch();

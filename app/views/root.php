@@ -8,6 +8,7 @@ global $dispatcher;
     <body>
         <h1>PHP Url Dispatcher</h1>
         <ul>
+            <li><b>BASEDIR:</b> <?php echo BASEDIR; ?></li>
             <li>
                 <b>Controller:</b>
                 <?php echo $dispatcher->controller; ?>
@@ -39,5 +40,7 @@ global $dispatcher;
             <li><a href="<?php echo BASEDIR; ?>badcontroller/">Bad Controller</a></li>
             <li><a href="<?php echo BASEDIR; ?>">Home</a></li>
         </ul>
+        <!--<h3>phpinfo</h3>-->
+        <?php # echo phpinfo(); ?>
     </body>
 </html>
