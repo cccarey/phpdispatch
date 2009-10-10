@@ -9,6 +9,8 @@ global $dispatcher;
         <h1>PHP Url Dispatcher</h1>
         <ul>
             <li><b>BASEDIR:</b> <?php echo BASEDIR; ?></li>
+            <li><b>REQUEST_URI:</b> <?php echo $_SERVER['REQUEST_URI']; ?></li>
+            <li><b>SCRIPT_NAME:</b> <?php echo $_SERVER['SCRIPT_NAME']; ?></li>
             <li>
                 <b>Controller:</b>
                 <?php echo $dispatcher->controller; ?>
